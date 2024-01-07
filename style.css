@@ -1,0 +1,130 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;font-family: sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(68, 59, 203));
+    display: grid;
+    place-items: center;
+}
+
+.game-info{
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+.tic-tac{
+    position: absolute;
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+    transform: translateY(20%);
+    margin-bottom: 100px;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+.box3, .box6{
+    border-bottom: 2px solid white;  
+}
+.box8{
+    border-right: 2px solid white;
+}
+.box7{
+    border-right: 2px solid white;
+}
+
+
+.new-game{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(234, 27, 27, 0.25);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+    scale: 0;
+    transition:1s ease-in-out;
+    padding: 150px;
+}
+.btn{
+    margin-top: 10px;
+    color: rgb(255, 0, 208);
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+.active{
+    scale: 1;
+
+}
+
+.win{
+    background-color: #6fb35e;
+}
+
+.input-name{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem; 
+    margin-left: 800px;
+
+}
+.heading{
+    align-items: center;
+    align-content: center;
+    margin-left: 50px;
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 10px;
+    gap: 20px;
+}
+.input input{
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+}
